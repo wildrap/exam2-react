@@ -45,7 +45,7 @@ export const ShowCustomer = () => {
                     <StyledTableCell>{row.custCode}</StyledTableCell>
                     <StyledTableCell align="center">
                       <Box display="flex">
-                        <Box component="span" sx={{ mx: 1 }}>
+                        <Box component="span" sx={{ m: 1 }}>
                           <Button
                             variant="contained"
                             color="primary"
@@ -54,7 +54,7 @@ export const ShowCustomer = () => {
                             Edit
                           </Button>
                         </Box>
-                        <Box component="span" sx={{ mx: 1 }}>
+                        <Box component="span" sx={{ m: 1 }}>
                           <Button
                             variant="contained"
                             color="warning"
