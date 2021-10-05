@@ -8,3 +8,10 @@ export type User = {
   id: number
   name: string
 }
+
+export interface Customer {
+  firstName: string;
+  lastName: string;
+  dateOfBirth: Date;
+  custCode: string;
+}
