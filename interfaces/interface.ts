@@ -4,14 +4,15 @@
 //
 // import { User } from 'path/to/interfaces';
 
-export type User = {
-  id: number
-  name: string
-}
+import { Timestamp } from "@firebase/firestore";
 
 export interface Customer {
   firstName: string;
   lastName: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
   custCode: string;
+  phone: string;
+  email: string;
+  createdDate: Timestamp;
+  updatedDate: Timestamp;
 }
