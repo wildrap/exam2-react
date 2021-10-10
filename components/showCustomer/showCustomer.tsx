@@ -10,11 +10,13 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import React from "react";
-import { rows } from "../../const/const";
+import React, { useEffect, useState } from "react";
 import { StyledTableCell, StyledTableRow } from "../../const/themes";
+import { CrudService } from "../../service/crudservice";
 
 export const ShowCustomer = () => {
+  const { rows } = CrudService();
+
   return (
     <Container>
       <Card>

@@ -1,4 +1,3 @@
-import { Timestamp } from "@firebase/firestore";
 import {
   Button,
   Card,
@@ -9,25 +8,15 @@ import {
 } from "@mui/material";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { tp } from "../../configs/firebase";
 import { Customer } from "../../interfaces/interface";
 import { CrudService } from "../../service/crudservice";
 
 export const AddCustomer = () => {
   const { register, handleSubmit, reset } = useForm<Customer>();
-  const { saveCustomer } = CrudService();
+  const { processDataToSave } = CrudService();
+
   const onSubmit: SubmitHandler<Customer> = (data) => {
-    const firstNameTemp: string = data.firstName;
-    const lastNameTemp: string = data.lastName;
-    const dobTemp = data.dateOfBirth;
-    const newDobTemp = dobTemp.split("-").join("");
-
-    const currentData = { ...data };
-    currentData.createdDate = new Timestamp(0, 0);
-    currentData.updatedDate = new Timestamp(0, 0);
-    currentData.custCode = firstNameTemp + lastNameTemp + newDobTemp;
-
-    saveCustomer(currentData);
+    processDataToSave;
     reset();
   };
 
